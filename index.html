@@ -7,12 +7,13 @@
 <body>
   
   <script>
-      function playRound(){
+          function playRound(playerSelection,computerSelection){
           
-        //Define the player selected rock/paper/scissors varriable.
-          var playerSelection = prompt("Please select Rock, Paper, or Scissors");
+          //Define the player selected rock/paper/scissors varriable.
+          playerSelection = prompt("Please select Rock, Paper, or Scissors");
+          playerSelection.toLowerCase();
 
-        //Define the computer selected rock/paper/scissors varriable.
+          //Define the computer selected rock/paper/scissors varriable.
           function computerPlay(){
               var a = Math.floor(Math.random()*(3-1+1))+1;
               if(a==1){
@@ -25,21 +26,34 @@
                             }
                         }
           }
+
+          //Assign player and computer selection varriables, make lower case words.
+          computerSelection = computerPlay();
+
+
+          //Check if answers are the same and return 0 = loss or 1 = win.
           
-          playerSelection.toLowerCase()
-
+          if (playerSelection==computerSelection){
+            console.log('You Win');
+            return 1
+          } else{
+            console.log('You Lost');
+            return 0
           }
- 
-    function userPlay(){
-        var playerSelection = prompt("Please select Rock, Paper, or Scissors");
-        return playerSelection
-    }
-    
-    //const playerSelection = userPlay()
-    //const computerSelection = computerPlay()
-    //console.log(playRound(playerSelection,computerSelection))
-      }
+          }
 
+      function game(){
+        var i;
+        score = [0];
+        n = 0;
+        for (i= 0; i<5; i++){
+          console.log('Round '+(i+1))
+          score[i]=playRound();
+          n += score[i] + n
+          console.log('You won ' + n + ' games out of ' + (i+1) + '!');
+          }
+
+        }   
   </script>
 </body>
 </html>
