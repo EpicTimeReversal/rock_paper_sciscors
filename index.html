@@ -6,15 +6,70 @@
 </head>
 <body>
   
-  <script>
+  <h1>
+    Rock Paper Scissors!
+  </h1>
+  <p>
+    The game will be best of 5!
+  </p>
+  <div id="theGame">
+        <button id="startGame">Start Game</button>
+  </div>
+
+    
+    <script>
     //Function to randomize the computer's decision.
-    function computerPlay(){
+    /*function computerPlay(){
       let choice = ['Rock','Paper','Scissors'];
       let index = Math.floor(Math.random()*(2-0+1))+0;
       return choice[index] 
-    }
+    }*/
 
-    //Function to play one round and determine if the player wins or not.
+    function gameBoard(theGame){
+
+      //Remove the start button.
+      var start = document.getElementById("startGame");
+      start.parentNode.removeChild(start);
+      
+      //Display the game board.
+      const boardDiv = document.querySelector("theGame");
+
+      const rockBtn = document.createElement('button');
+      rockBtn.classList.add('id','Rock');
+      boardDiv.appendChild(rockBtn);
+
+      const paperBtn = document.createElement('button');
+      paperBtn.classList.add('id','Paper');
+      boardDiv.appendChild(paperBtn);
+
+      const scissorsBtn = document.createElement('button');
+      scissorsBtn.classList.add('id','Paper');
+      boardDiv.appendChild(scissorsBtn);
+
+
+
+
+
+    }
+    
+    var startGame = document.querySelector("#startGame");
+    startGame.onclick = () => gameBoard();
+
+
+
+
+
+      /*
+      <div id = "gameBoard">
+        <button id="Rock">Rock</button>
+        <button id="Paper">Papper</button>
+        <button id="Scissors">Scissors</button>
+      </div>
+      }
+      */
+
+
+    /*//Function to play one round and determine if the player wins or not.
     function playRound(playerSelection,computerSelection){
 
       //Use switch to determine the scenario and display results.
@@ -68,6 +123,7 @@
     function game(){
       let playerScore = 0;
       let computerScore = 0;
+      playerSelection = null;
       
       //Runs the game 5 times, and adjusts the scores accordingly.
       for (i=0; i<5; i++){
@@ -88,7 +144,7 @@
           break;
         }
       }
-    
+
     //Prints out the victor!
     if (playerScore>computerScore){
       return 'You have beaten the computer!'
@@ -98,6 +154,7 @@
       return "It's a tie game!'"
       }
     }
+    */
   </script>
 </body>
 </html>
