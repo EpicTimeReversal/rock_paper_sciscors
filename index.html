@@ -15,77 +15,48 @@
     The game will be best of 5! Select one of the following to start:
   </p>
   <div id="theGame">
-    <button id='Rock'>Rock</button>
-    <button id='Paper'>Paper</button>
-    <button id='Scissors'>Scissors</button>
+    <button onclick=rpsGame id='start'>Start!</button>
   </div>
 
-
   <script>
-    //Function to randomize the computer's decision.
-    function computerPlay() {
-      let choice = ['Rock', 'Paper', 'Scissors'];
-      let index = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
-      return choice[index]
-    }
-
-
     function rpsGame() {
-    
-      for (int=0;i<4; i++) {
-        var Rock
-        Rock.addEventListener('click');
-        Paper.addEventListener('click');
-        Scissors.addEventListener('click');
-      }
 
+      <button id='rock'>Rock</button>
+      rock.addEventListener('click');
 
+      <button id='paper'>Paper</button>
+      paper.addEventListener('click');
 
-    }
+      <button id='scissors'>Scissors</button>
+      scissors.addEventListener('click');
 
-
-    
-
-
-
-    function gameBoard(theGame) {
+      const container = document.querySelector('#theGame');
+      container.appendChild(rock);
+      container.appendChild(paper);
+      container.appendChild(scissors);
+      container.removeChild('start');
+      /*
+            for (int = 0; i < 4; i++) {
+              var rounds = 0
+              var playerScore = 0
+              var computerScore = 0
       
-   Define rock, paper, scissors buttons.
-      const rockBTN = document.createElement('button');
-      rockBTN.innerText = 'Rock';
-      rockBTN.addEventListener('click');
-
-      const paperBTN = document.createElement('button');
-      paperBTN.innerText = 'Paper';
-      paperBTN.addEventListener('click');
-
-      const scissorsBTN = document.createElement('button');
-      scissorsBTN.innerText = 'Scissors';
-      scissorsBTN.addEventListener('click');
-
-      const Board = document.createElement('div');
-      Board.appendChild(rockBTN);
-      Board.appendChild(paperBTN);
-      Board.appendChild(scissorsBTN);
-      */
-
-      //Remove the start button and create gameboard.
-      var start = document.getElementById("startGame");
-      start.parentNode.removeChild("startGame");
+              //Function to randomize the computer's decision.
+              function computerPlay() {
+                let choice = ['Rock', 'Paper', 'Scissors'];
+                let index = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
+                return choice[index]
+              }
       
-
-
+              if (rounds < 4) {
+                function playerPlay() {
+                }
+      
+                var c = computerPlay()
+                var p = playerPlay()
+              }
+              */
     }
-
-
-    /*
-      <div id = "gameBoard">
-        <button id="Rock">Rock</button>
-        <button id="Paper">Papper</button>
-        <button id="Scissors">Scissors</button>
-      </div>
-      }
-    */
 
 
     /*//Function to play one round and determine if the player wins or not.
