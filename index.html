@@ -15,10 +15,26 @@
     The game will be best of 5! Select one of the following to start:
   </p>
   <div id="theGame">
-    <button onclick=rpsGame id='start'>Start!</button>
+    <button id='start'>Start!</button>
   </div>
 
   <script>
+      <button id='rock'>Rock</button>
+      rock.addEventListener('click');
+
+      <button id='paper'>Paper</button>
+      paper.addEventListener('click');
+
+      <button id='scissors'>Scissors</button>
+      scissors.addEventListener('click');
+
+      const container = document.querySelector('#theGame');
+      container.appendChild(rock);
+      container.appendChild(paper);
+      container.appendChild(scissors);
+      container.removeChild('start');
+
+/*
     function rpsGame() {
 
       <button id='rock'>Rock</button>
@@ -35,7 +51,7 @@
       container.appendChild(paper);
       container.appendChild(scissors);
       container.removeChild('start');
-      /*
+
             for (int = 0; i < 4; i++) {
               var rounds = 0
               var playerScore = 0
@@ -55,9 +71,8 @@
                 var c = computerPlay()
                 var p = playerPlay()
               }
-              */
     }
-
+    */
 
     /*//Function to play one round and determine if the player wins or not.
     function playRound(playerSelection,computerSelection){
